@@ -1,6 +1,8 @@
 function [] = createEdgels( filename, centerE, number)
     ucm = imread(filename, 'bmp');
     bdryE = (ucm >= 60);
+    %template has size 500x400, thus transform the image to this size.
+    bdryE = imresize(bdryE, 500, 400);
     E = [];
     anglesEdgelsForBdry = zeros(size(bdryE,1), size(bdryE,2));
     for i = 1:size(bdryE,1)

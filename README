@@ -1,0 +1,15 @@
+To run the SVM to classify data, run the following command at this location:
+
+>> addpath('./SVM');
+>> generateSVMStruct;
+
+
+To create Training Data for the SVM, run the following command 
+generateEdgels( filepath, centerOfObject, numberString), for example:
+
+>> addpath('./TrainingExamples');
+>> generateEdgels( '/Users/giu/Documents/Winston/Training Data/Faces/SegmentedFaces/face20_ucm.bmp', [232;180], '20');
+
+The templates are inside the path:
+
+./TrainingExamples/data/
